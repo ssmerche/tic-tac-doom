@@ -1,8 +1,7 @@
 (ns tic-tac-doom.core)
 
 (defn column-sets [board]
-  (for [i (range (count board))] 
-    (set (map #(% i) board))))
+  (->> board (apply interleave) (partition (count (first board))) (map set)))
 
 (def row-sets (partial map set))
 
