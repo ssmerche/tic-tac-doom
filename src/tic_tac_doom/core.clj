@@ -1,7 +1,7 @@
 (ns tic-tac-doom.core)
 
 (defn column-sets [board]
- (for [i (range (count board))] (set (map #(% i) board))))
+  (for [i (range (count board))] (set (map #(% i) board))))
 
 (def row-sets (partial map set))
 
