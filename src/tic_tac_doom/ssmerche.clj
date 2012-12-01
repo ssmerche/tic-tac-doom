@@ -1,4 +1,4 @@
-(ns tic-tac-doom.core)
+(ns tic-tac-doom.ssmerche)
 
 (defn column-sets [board]
   (for [i (range (count board))] (set (map #(% i) board))))
